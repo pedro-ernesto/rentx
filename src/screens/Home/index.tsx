@@ -3,11 +3,15 @@ import { StatusBar } from 'react-native';
 
 //letra maiuscula para ser usado como componente
 
+import { RFValue } from 'react-native-responsive-fontsize';
+
 import Logo from '../../assets/logo.svg';
 
 import { 
   Container,
-  Header 
+  Header,
+  HeaderContent,
+  TotalCars
 } from './styles';
 
 const Home: React.FC = () => {
@@ -19,7 +23,15 @@ const Home: React.FC = () => {
         translucent
       />
       <Header>
-        
+        <HeaderContent>
+          <Logo
+            width={RFValue(108)}
+            height={RFValue(12)}
+          />
+          <TotalCars>
+            Total de 12 carros
+          </TotalCars>
+        </HeaderContent>
       </Header>
     </Container>
   );
