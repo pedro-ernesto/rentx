@@ -1,6 +1,5 @@
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
-import { FlatList } from 'react-native';
 import { getBottomSpace, getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
