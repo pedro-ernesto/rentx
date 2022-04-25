@@ -4,6 +4,7 @@ import React from 'react';
 import BackButton from '../../components/BackButton';
 import ImageSlider from '../../components/ImageSlider';
 import Accessory from '../../components/Accessory';
+import Button from '../../components/Button';
 
 import SpeedSvg from '../../assets/speed.svg';
 import AccelerationSvg from '../../assets/acceleration.svg';
@@ -25,6 +26,7 @@ import { Container,
   Rent,
   About,
   Accessories,
+  Footer,
 
  } from './styles';
 
@@ -65,6 +67,10 @@ const CarDetails: React.FC = () => {
           Automóvel pika pika pika brabo brabo brabo, pra pra pra pra pra pra.
         </About>
       </Content>
+
+      <Footer>
+        <Button title = 'Confirmar'/>
+      </Footer>
     </Container>
   );
 }
