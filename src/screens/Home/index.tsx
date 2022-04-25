@@ -1,13 +1,26 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 
-import { Container,Title } from './styles';
+//letra maiuscula para ser usado como componente
+
+import Logo from '../../assets/logo.svg';
+
+import { 
+  Container,
+  Header 
+} from './styles';
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <Title>
-        Home
-      </Title>
+      <StatusBar
+        barStyle='light-content'
+        backgroundColor='transparent'
+        translucent
+      />
+      <Header>
+        
+      </Header>
     </Container>
   );
 }
