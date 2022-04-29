@@ -18,7 +18,7 @@ import { Container,Header,Title,
   Footer } from './styles';
 
 
-const Scheduling: React.FC = () => {
+const SchedulingDetails: React.FC = () => {
   const theme = useTheme();
 
   return (
@@ -65,4 +65,4 @@ const Scheduling: React.FC = () => {
   );
 }
 
-export default Scheduling;
+export default SchedulingDetails;

@@ -13,7 +13,7 @@ import {
   Archivo_600SemiBold
 } from '@expo-google-fonts/archivo';
 
-import Scheduling from './src/screens/Scheduling';
+import Scheduling from './src/screens/SchedulingComplete';
 
 import theme from './src/styles/theme';
 
