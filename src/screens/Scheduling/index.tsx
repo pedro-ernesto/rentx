@@ -4,6 +4,8 @@ import { useTheme } from 'styled-components';
 import { StatusBar } from 'react-native';
 
 import BackButton from '../../components/BackButton';
+import Button from '../../components/Button';
+import Calendar from '../../components/Calendar';
 
 import ArrowSvg from '../../assets/arrow.svg';
 
@@ -14,7 +16,7 @@ import { Container,Header,Title,
   DateValue,
   Content,
   Footer } from './styles';
-import Button from '../../components/Button';
+
 
 const Scheduling: React.FC = () => {
   const theme = useTheme();
@@ -53,7 +55,7 @@ const Scheduling: React.FC = () => {
       </Header>
       
       <Content>
-
+        <Calendar/>
       </Content>
       
       <Footer>
