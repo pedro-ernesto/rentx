@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
+import { useNavigation } from '@react-navigation/native';
 
 import { StatusBar } from 'react-native';
 
@@ -17,10 +18,18 @@ import { Container,Header,Title,
   Content,
   Footer } from './styles';
 
+  type NavigationProps = {
+    navigate:(screen:string) => void;
+  }
 
-const SchedulingDetails: React.FC = () => {
+const Scheduling: React.FC = () => {
   const theme = useTheme();
 
+  const navigation = useNavigation<NavigationProps>();
+  
+  function handleConfirmRental() {
+    navigation.navigate('SchedulingDetails')
+  }
   return (
     <Container>
       <StatusBar
@@ -59,10 +68,10 @@ const SchedulingDetails: React.FC = () => {
       </Content>
       
       <Footer>
-        <Button title="Confirmar"/>
+        <Button title="Confirmar" onPress={handleConfirmRental}/>
       </Footer>
     </Container>
   );
 }
 
-export default SchedulingDetails;
+export default Scheduling;

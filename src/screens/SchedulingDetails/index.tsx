@@ -2,6 +2,7 @@ import React from 'react';
 import {Feather} from '@expo/vector-icons';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { useTheme } from 'styled-components';
+import { useNavigation } from '@react-navigation/native';
 
 
 import BackButton from '../../components/BackButton';
@@ -43,9 +44,18 @@ import { Container,
 
  } from './styles';
 
+ type NavigationProps = {
+  navigate:(screen:string) => void;
+}
 
-const CarDetails: React.FC = () => {
+const SchedulingDetails: React.FC = () => {
   const theme = useTheme();
+
+  const navigation = useNavigation<NavigationProps>();
+  
+  function handleConfirmRental() {
+    navigation.navigate('SchedulingComplete')
+  }
 
   return (
     <Container>
@@ -118,10 +128,11 @@ const CarDetails: React.FC = () => {
         <Button 
           title = 'Alugar Agora'
           color = {theme.colors.success}
+          onPress={handleConfirmRental}
           />
       </Footer>
     </Container>
   );
 }
 
-export default CarDetails;
+export default SchedulingDetails;

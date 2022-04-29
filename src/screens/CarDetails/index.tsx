@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useNavigation } from '@react-navigation/native';
 
 import BackButton from '../../components/BackButton';
 import ImageSlider from '../../components/ImageSlider';
@@ -30,7 +30,17 @@ import { Container,
 
  } from './styles';
 
+ type NavigationProps = {
+  navigate:(screen:string) => void;
+}
+
 const CarDetails: React.FC = () => {
+  const navigation = useNavigation<NavigationProps>();
+  
+  function handleConfirmRental() {
+    navigation.navigate('Scheduling')
+  }
+
   return (
     <Container>
       <Header>
@@ -64,12 +74,14 @@ const CarDetails: React.FC = () => {
         </Accessories>
 
         <About>
-          Automóvel pika pika pika brabo brabo brabo, pra pra pra pra pra pra.
+          Este é um automóvel desportivo. 
+          Surgiu do lendário touro de lide indultado na praça real Maestranza de Sevilla. 
+          É um belíssimo carro pra quem gosta de acelerar.
         </About>
       </Content>
 
       <Footer>
-        <Button title = 'Confirmar'/>
+        <Button title = 'Escolher período do aluguel' onPress={handleConfirmRental}/>
       </Footer>
     </Container>
   );
