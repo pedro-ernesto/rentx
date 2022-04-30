@@ -25,7 +25,7 @@ import {
 } from './styles';
 
 type NavigationProps = {
-  navigate:(screen:string) => void;
+  navigate:(screen:string,car:object) => void;
 }
 
 const Home: React.FC = () => {
@@ -43,8 +43,8 @@ const Home: React.FC = () => {
     thumbnail: 'https://www.pngkey.com/png/full/383-3833840_rs-5-coup-price-from-audi-rs5-png.png'
   }
   
-  function handleCarDetails() {
-    navigation.navigate('CarDetails')
+  function handleCarDetails(car:CarDto) {
+    navigation.navigate('CarDetails', { car })
   }
 
   useEffect(() => {
@@ -85,7 +85,7 @@ const Home: React.FC = () => {
           data={cars}
           keyExtractor = {item => String(item.id)}
           renderItem={({item}) => 
-          <Car data={item} onPress={handleCarDetails}/>}
+          <Car data={item} onPress={() => handleCarDetails(item)}/>}
         />
       }
     </Container>
