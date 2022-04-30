@@ -13,13 +13,15 @@ export function getAcessoryIcon (type: string) {
   switch (type) {
     case 'speed':
       return SpeedSvg;
-    case 'Acceleration':
+    case 'acceleration':
       return AccelerationSvg;
     case 'turning_diameter':
       return ForceSvg;
     case 'gasoline_motor':
       return GasolineSvg;
-    case 'eletric_motor':
+    case 'electric_motor':
+      return EnergySvg;
+    case 'electric':
       return EnergySvg;
     case 'hybrid_motor':
       return HybridSvg;

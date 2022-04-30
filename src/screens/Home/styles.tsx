@@ -41,3 +41,20 @@ export const CarList = styled(FlatList as new () => FlatList<CarDto>).attrs({
 })`
   
 `;
+
+export const MyCarsButton = styled.TouchableOpacity`
+  width: 60px;
+  height: 60px;
+
+  border-radius: 30px;
+
+  background-color: ${({theme}) => theme.colors.main};
+
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 13px;
+  right: 22px;
+
+`;

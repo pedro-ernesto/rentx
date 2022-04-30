@@ -29,7 +29,7 @@ import { Container,
 
 
 type NavigationProps = {
-  navigate:(screen:string) => void;
+  navigate:(screen:string,car:object) => void;
   goBack:() => void;
 }
 
@@ -43,7 +43,7 @@ const CarDetails: React.FC = () => {
   const navigation = useNavigation<NavigationProps>();
   
 function handleConfirmRental() {
-  navigation.navigate('Scheduling')
+  navigation.navigate('Scheduling', {car})
 }
 
 function handleBack() {
