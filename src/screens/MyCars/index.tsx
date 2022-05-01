@@ -21,7 +21,7 @@ import BackButton from '../../components/BackButton';
 import { useTheme } from 'styled-components';
 import { useNavigation } from '@react-navigation/native';
 import Car from '../../components/Car';
-import Load from '../../components/Load';
+import LoadAnimation from '../../components/LoadAnimation';
 
 
 type NavigationProps = {
@@ -85,7 +85,7 @@ const MyCars: React.FC = () => {
         </SubTitle>
       </Header>
       { 
-        loading ? <Load/> : 
+        loading ? <LoadAnimation/> : 
         <Content>
           <Appointments>
             <AppointmentsTitle>Agendamentos feitos</AppointmentsTitle>
